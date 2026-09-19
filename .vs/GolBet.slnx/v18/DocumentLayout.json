@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\views\\matches\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\views\\matches\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\views\\matches\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\views\\matches\\detail.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Detail.cshtml.cs",
-              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Views\\Matches\\Detail.cshtml.cs",
-              "RelativeDocumentMoniker": "GolBet.Web\\Views\\Matches\\Detail.cshtml.cs",
-              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Views\\Matches\\Detail.cshtml.cs",
-              "RelativeToolTip": "GolBet.Web\\Views\\Matches\\Detail.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T18:09:37.278Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -41,9 +24,9 @@
               "RelativeDocumentMoniker": "GolBet.Web\\Views\\Matches\\Detail.cshtml",
               "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Views\\Matches\\Detail.cshtml",
               "RelativeToolTip": "GolBet.Web\\Views\\Matches\\Detail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAYwJQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-19T18:08:48.144Z",
+              "WhenOpened": "2026-09-19T18:57:21.686Z",
               "EditorCaption": ""
             }
           ]

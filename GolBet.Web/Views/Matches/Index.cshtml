@@ -47,11 +47,11 @@
     {
         <div class="col">
             <div class="card h-100 shadow-sm">
+
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <small class="text-muted">
-                        @match.Date
-                            .ToColombiaTime()
-                            .ToString("ddd dd MMM yyyy · h:mm tt")
+                        @(match.Date.ToColombiaTime()
+                            .ToString("ddd dd MMM yyyy · h:mm tt"))
                     </small>
 
                     @switch (match.Status)
@@ -78,6 +78,7 @@
 
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-center text-center">
+
                         <div class="w-100">
                             <img src="@(match.HomeTeamCrestUrl
                                 ?? "https://placehold.co/60x60/e9ecef/6c757d?text=FC" )"
@@ -118,16 +119,19 @@
                                 @match.AwayTeamName
                             </div>
                         </div>
+
                     </div>
                 </div>
 
                 <div class="card-footer">
                     <div class="row g-2 text-center">
+
                         <div class="col">
                             <div class="border rounded py-1">
                                 <small class="text-muted d-block">
                                     1 · Local
                                 </small>
+
                                 <span class="fw-bold">
                                     @match.HomeOdds.ToString("0.00")
                                 </span>
@@ -139,6 +143,7 @@
                                 <small class="text-muted d-block">
                                     X · Empate
                                 </small>
+
                                 <span class="fw-bold">
                                     @match.DrawOdds.ToString("0.00")
                                 </span>
@@ -150,11 +155,13 @@
                                 <small class="text-muted d-block">
                                     2 · Visitante
                                 </small>
+
                                 <span class="fw-bold">
                                     @match.AwayOdds.ToString("0.00")
                                 </span>
                             </div>
                         </div>
+
                     </div>
 
                     <a asp-action="Detail"
@@ -163,6 +170,7 @@
                         Ver detalle
                     </a>
                 </div>
+
             </div>
         </div>
     }
