@@ -1,0 +1,74 @@
+﻿@using GolBet.Entities.Enums
+@using GolBet.Web.Helpers
+@model IEnumerable<GolBet.Services.DTOs.MatchDto>
+
+@{
+    ViewData["Title"] = "Partidos";
+}
+
+<h2 class="mb-4">Cartelera de partidos</h2>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+    @foreach (var match in Model)
+    {
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <div class="card-header">
+                    <small class="text-muted">
+                        @match.Date.ToColombiaTime()
+                        .ToString("dd/MM/yyyy h:mm tt")
+                    </small>
+                </div>
+
+                <div class="card-body text-center">
+                    <h5>
+                        @match.HomeTeamName
+                        <span class="text-muted">vs</span>
+                        @match.AwayTeamName
+                    </h5>
+
+                    <p>
+                        Estado:
+                        @switch (match.Status)
+                        {
+                            case MatchStatus.Scheduled:
+                                <span class="badge bg-primary">
+                                    Programado
+                                </span>
+                                break;
+
+                            case MatchStatus.InProgress:
+                                <span class="badge bg-warning text-dark">
+                                    En juego
+                                </span>
+                                break;
+
+                            case MatchStatus.Finished:
+                                <span class="badge bg-secondary">
+                                    Finalizado
+                                </span>
+                                break;
+                        }
+                    </p>
+                </div>
+
+                <div class="card-footer text-center">
+                    <div>
+                        Local:
+                        @match.HomeOdds.ToString("0.00")
+                    </div>
+
+                    <div>
+                        Empate:
+                        @match.DrawOdds.ToString("0.00")
+                    </div>
+
+                    <div>
+                        Visitante:
+                        @match.AwayOdds.ToString("0.00")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

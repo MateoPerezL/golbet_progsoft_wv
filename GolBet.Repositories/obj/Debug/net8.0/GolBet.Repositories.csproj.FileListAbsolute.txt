@@ -1,4 +1,5 @@
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Repositories.deps.json
+C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Repositories.runtimeconfig.json
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Repositories.dll
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Repositories.pdb
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Entities.dll
@@ -13,6 +14,5 @@ C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\GolBet.R.A7B
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\GolBet.Repositories.dll
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\refint\GolBet.Repositories.dll
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\GolBet.Repositories.pdb
-C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\ref\GolBet.Repositories.dll
-C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\bin\Debug\net8.0\GolBet.Repositories.runtimeconfig.json
 C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\GolBet.Repositories.genruntimeconfig.cache
+C:\ReposITM\golbet_progsoft_wv\GolBet.Repositories\obj\Debug\net8.0\ref\GolBet.Repositories.dll
