@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GolBet.Repositories")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42cd35847313b65f65b20b61e59a52e8f71e5bb4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c04d8014554ce908b3ad963c7a1feec80f5d1f6")]
 [assembly: System.Reflection.AssemblyProductAttribute("GolBet.Repositories")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GolBet.Repositories")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
