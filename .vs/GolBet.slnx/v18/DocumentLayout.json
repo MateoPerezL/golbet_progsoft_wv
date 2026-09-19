@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\ReposITM\\golbet_progsoft_wv\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "GolBet.Web\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "GolBet.Web\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACYAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-19T00:34:44.691Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Program.cs",
+              "RelativeDocumentMoniker": "GolBet.Web\\Program.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Program.cs",
+              "RelativeToolTip": "GolBet.Web\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T02:43:47.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "GolBet.Web\\appsettings.json",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\appsettings.json",
+              "RelativeToolTip": "GolBet.Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-19T02:42:08.622Z",
               "EditorCaption": ""
             }
           ]
