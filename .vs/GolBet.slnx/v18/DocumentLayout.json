@@ -7,8 +7,24 @@
       "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E81E5965-274E-DA5A-620D-7DD0CE19BE7E}|GolBet.Web\\GolBet.Web.csproj|solutionrelative:golbet.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.repositories\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|solutionrelative:golbet.repositories\\data\\dbseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.repositories\\implementations\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|solutionrelative:golbet.repositories\\implementations\\matchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|solutionrelative:golbet.repositories\\implementations\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.repositories\\interfaces\\imatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|solutionrelative:golbet.repositories\\interfaces\\imatchrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|c:\\repositm\\golbet_progsoft_wv\\golbet.repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60F14AD4-968F-4088-888A-510848039704}|GolBet.Repositories\\GolBet.Repositories.csproj|solutionrelative:golbet.repositories\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,22 +44,74 @@
               "RelativeDocumentMoniker": "GolBet.Web\\Program.cs",
               "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\Program.cs",
               "RelativeToolTip": "GolBet.Web\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-19T02:43:47.178Z",
+              "WhenOpened": "2026-09-19T03:25:55.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "GolBet.Web\\appsettings.json",
-              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Web\\appsettings.json",
-              "RelativeToolTip": "GolBet.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-19T02:42:08.622Z",
+              "Title": "DbSeeder.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Data\\DbSeeder.cs",
+              "RelativeDocumentMoniker": "GolBet.Repositories\\Data\\DbSeeder.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Data\\DbSeeder.cs",
+              "RelativeToolTip": "GolBet.Repositories\\Data\\DbSeeder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T03:14:48.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MatchRepository.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Implementations\\MatchRepository.cs",
+              "RelativeDocumentMoniker": "GolBet.Repositories\\Implementations\\MatchRepository.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Implementations\\MatchRepository.cs",
+              "RelativeToolTip": "GolBet.Repositories\\Implementations\\MatchRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T03:13:46.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "GolBet.Repositories\\Implementations\\GenericRepository.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Implementations\\GenericRepository.cs",
+              "RelativeToolTip": "GolBet.Repositories\\Implementations\\GenericRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T03:11:12.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IMatchRepository.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Interfaces\\IMatchRepository.cs",
+              "RelativeDocumentMoniker": "GolBet.Repositories\\Interfaces\\IMatchRepository.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Interfaces\\IMatchRepository.cs",
+              "RelativeToolTip": "GolBet.Repositories\\Interfaces\\IMatchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T03:10:35.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "GolBet.Repositories\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\ReposITM\\golbet_progsoft_wv\\GolBet.Repositories\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "GolBet.Repositories\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-19T03:10:04.51Z",
               "EditorCaption": ""
             }
           ]
