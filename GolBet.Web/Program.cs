@@ -14,13 +14,29 @@ CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Servicios MVC
-builder.Services.AddControllersWithViews();
+// Servicios MVC y mensajes de validación en español
+builder.Services.AddControllersWithViews(options =>
+{
+    var messages = options.ModelBindingMessageProvider;
+
+    messages.SetValueMustBeANumberAccessor(
+        fieldName =>
+            $"El campo {fieldName} debe ser un número.");
+
+    messages.SetAttemptedValueIsInvalidAccessor(
+        (value, fieldName) =>
+            $"El valor '{value}' no es válido para {fieldName}.");
+
+    messages.SetMissingBindRequiredValueAccessor(
+        fieldName =>
+            $"El campo {fieldName} es obligatorio.");
+});
 
 // Entity Framework Core
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+        builder.Configuration.GetConnectionString(
+            "DefaultConnection")));
 
 // Repositorio genérico
 builder.Services.AddScoped(
@@ -38,7 +54,6 @@ builder.Services.AddAutoMapper(
 // Servicios de la aplicación
 builder.Services.AddScoped<IMatchService, MatchService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
-
 
 var app = builder.Build();
 
