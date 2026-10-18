@@ -22,15 +22,20 @@ public class MatchService : IMatchService
     }
 
     public async Task<IEnumerable<MatchDto>> GetBoardAsync(
-        MatchStatus? status = null)
+        MatchStatus? status = null,
+        string? search = null)
     {
         var matches =
-            await _matchRepository.GetAllWithTeamsAsync(status);
+            await _matchRepository.GetAllWithTeamsAsync(
+                status,
+                search);
 
-        return _mapper.Map<IEnumerable<MatchDto>>(matches);
+        return _mapper.Map<IEnumerable<MatchDto>>(
+            matches);
     }
 
-    public async Task<MatchDetailDto?> GetDetailAsync(int id)
+    public async Task<MatchDetailDto?> GetDetailAsync(
+        int id)
     {
         var match =
             await _matchRepository.GetByIdWithDetailsAsync(id);
@@ -40,9 +45,11 @@ public class MatchService : IMatchService
             : _mapper.Map<MatchDetailDto>(match);
     }
 
-    public async Task<MatchFormDto?> GetForEditAsync(int id)
+    public async Task<MatchFormDto?> GetForEditAsync(
+        int id)
     {
-        var match = await _matchRepository.GetByIdAsync(id);
+        var match =
+            await _matchRepository.GetByIdAsync(id);
 
         if (match is null)
         {
@@ -51,8 +58,7 @@ public class MatchService : IMatchService
 
         var dto = _mapper.Map<MatchFormDto>(match);
 
-        // La base de datos guarda UTC;
-        // el formulario muestra hora de Colombia.
+        // El formulario muestra la hora de Colombia.
         dto.Date = dto.Date.ToColombiaTime();
 
         return dto;
@@ -64,8 +70,7 @@ public class MatchService : IMatchService
 
         var match = _mapper.Map<Match>(dto);
 
-        // El formulario recibe hora de Colombia;
-        // la base de datos guarda UTC.
+        // El formulario usa la hora de Colombia.
         match.Date = dto.Date.ToUtcFromColombia();
 
         await _matchRepository.AddAsync(match);
@@ -75,7 +80,8 @@ public class MatchService : IMatchService
     {
         ValidateBusinessRules(dto);
 
-        var match = await _matchRepository.GetByIdAsync(dto.Id)
+        var match =
+            await _matchRepository.GetByIdAsync(dto.Id)
             ?? throw new KeyNotFoundException(
                 $"Match {dto.Id} not found.");
 
@@ -91,15 +97,18 @@ public class MatchService : IMatchService
         await _matchRepository.DeactivateAsync(id);
     }
 
-    private static void ValidateBusinessRules(MatchFormDto dto)
+    private static void ValidateBusinessRules(
+        MatchFormDto dto)
     {
         if (dto.HomeTeamId == dto.AwayTeamId)
         {
             throw new InvalidOperationException(
-                "El equipo local y el visitante no pueden ser el mismo.");
+                "El equipo local y el visitante " +
+                "no pueden ser el mismo.");
         }
 
-        if (dto.Date.ToUtcFromColombia() <= DateTime.UtcNow)
+        if (dto.Date.ToUtcFromColombia()
+            <= DateTime.UtcNow)
         {
             throw new InvalidOperationException(
                 "La fecha del partido debe ser futura.");

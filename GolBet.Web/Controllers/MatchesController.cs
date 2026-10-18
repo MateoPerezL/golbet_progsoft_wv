@@ -21,19 +21,24 @@ public class MatchesController : Controller
         _teamService = teamService;
     }
 
-    // Público: cualquier visitante puede ver la cartelera.
+    // GET: /Matches
+    // Ejemplo: /Matches?search=nacional&status=Scheduled
     public async Task<IActionResult> Index(
-        MatchStatus? status)
+        MatchStatus? status,
+        string? search)
     {
         ViewBag.CurrentStatus = status;
+        ViewBag.CurrentSearch = search;
 
         var board =
-            await _matchService.GetBoardAsync(status);
+            await _matchService.GetBoardAsync(
+                status,
+                search);
 
         return View(board);
     }
 
-    // Público: cualquier visitante puede ver el detalle.
+    // GET: /Matches/Detail/5
     public async Task<IActionResult> Detail(int id)
     {
         var match =
@@ -47,7 +52,7 @@ public class MatchesController : Controller
         return View(match);
     }
 
-    // Solo Admin: mostrar formulario de creación.
+    // GET: /Matches/Create
     [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Create()
     {
@@ -56,7 +61,7 @@ public class MatchesController : Controller
         return View(new MatchFormDto());
     }
 
-    // Solo Admin: guardar partido.
+    // POST: /Matches/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = DbSeeder.AdminRole)]
@@ -91,7 +96,7 @@ public class MatchesController : Controller
         }
     }
 
-    // Solo Admin: mostrar formulario de edición.
+    // GET: /Matches/Edit/5
     [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Edit(int id)
     {
@@ -108,7 +113,7 @@ public class MatchesController : Controller
         return View(dto);
     }
 
-    // Solo Admin: actualizar partido.
+    // POST: /Matches/Edit
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = DbSeeder.AdminRole)]
@@ -143,7 +148,7 @@ public class MatchesController : Controller
         }
     }
 
-    // Solo Admin: desactivar partido.
+    // POST: /Matches/Deactivate/5
     [HttpPost]
     [ValidateAntiForgeryToken]
     [Authorize(Roles = DbSeeder.AdminRole)]

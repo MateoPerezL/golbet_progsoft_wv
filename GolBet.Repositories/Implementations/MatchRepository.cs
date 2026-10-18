@@ -15,7 +15,8 @@ public class MatchRepository
     }
 
     public async Task<IEnumerable<Match>> GetAllWithTeamsAsync(
-        MatchStatus? status = null)
+        MatchStatus? status = null,
+        string? search = null)
     {
         var query = _dbSet
             .Include(match => match.HomeTeam)
@@ -26,7 +27,20 @@ public class MatchRepository
 
         if (status.HasValue)
         {
-            query = query.Where(match => match.Status == status.Value);
+            query = query.Where(
+                match => match.Status == status.Value);
+        }
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            var searchTerm = search.Trim().ToLower();
+
+            query = query.Where(match =>
+                match.HomeTeam.Name.ToLower()
+                    .Contains(searchTerm)
+                ||
+                match.AwayTeam.Name.ToLower()
+                    .Contains(searchTerm));
         }
 
         return await query
@@ -41,6 +55,7 @@ public class MatchRepository
             .Include(match => match.AwayTeam)
             .Include(match => match.Bets)
             .AsNoTracking()
-            .FirstOrDefaultAsync(match => match.Id == id);
+            .FirstOrDefaultAsync(
+                match => match.Id == id);
     }
 }
