@@ -149,11 +149,14 @@
         </small>
 
         <div class="d-flex gap-2">
-            <a asp-action="Edit"
-               asp-route-id="@Model.Id"
-               class="btn btn-outline-primary">
-                Editar
-            </a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Edit"
+                   asp-route-id="@Model.Id"
+                   class="btn btn-outline-primary">
+                    Editar
+                </a>
+            }
 
             @if (Model.Status == MatchStatus.Scheduled)
             {

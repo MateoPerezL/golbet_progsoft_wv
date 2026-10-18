@@ -1,6 +1,8 @@
 ﻿using GolBet.Entities.Enums;
+using GolBet.Repositories.Data;
 using GolBet.Services.DTOs;
 using GolBet.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -19,21 +21,23 @@ public class MatchesController : Controller
         _teamService = teamService;
     }
 
-    // GET /Matches
-    // GET /Matches?status=Scheduled
-    public async Task<IActionResult> Index(MatchStatus? status)
+    // Público: cualquier visitante puede ver la cartelera.
+    public async Task<IActionResult> Index(
+        MatchStatus? status)
     {
         ViewBag.CurrentStatus = status;
 
-        var board = await _matchService.GetBoardAsync(status);
+        var board =
+            await _matchService.GetBoardAsync(status);
 
         return View(board);
     }
 
-    // GET /Matches/Detail/5
+    // Público: cualquier visitante puede ver el detalle.
     public async Task<IActionResult> Detail(int id)
     {
-        var match = await _matchService.GetDetailAsync(id);
+        var match =
+            await _matchService.GetDetailAsync(id);
 
         if (match is null)
         {
@@ -43,7 +47,8 @@ public class MatchesController : Controller
         return View(match);
     }
 
-    // GET /Matches/Create
+    // Solo Admin: mostrar formulario de creación.
+    [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Create()
     {
         await LoadTeamsAsync();
@@ -51,10 +56,12 @@ public class MatchesController : Controller
         return View(new MatchFormDto());
     }
 
-    // POST /Matches/Create
+    // Solo Admin: guardar partido.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(MatchFormDto dto)
+    [Authorize(Roles = DbSeeder.AdminRole)]
+    public async Task<IActionResult> Create(
+        MatchFormDto dto)
     {
         if (!ModelState.IsValid)
         {
@@ -84,10 +91,12 @@ public class MatchesController : Controller
         }
     }
 
-    // GET /Matches/Edit/5
+    // Solo Admin: mostrar formulario de edición.
+    [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Edit(int id)
     {
-        var dto = await _matchService.GetForEditAsync(id);
+        var dto =
+            await _matchService.GetForEditAsync(id);
 
         if (dto is null)
         {
@@ -99,10 +108,12 @@ public class MatchesController : Controller
         return View(dto);
     }
 
-    // POST /Matches/Edit
+    // Solo Admin: actualizar partido.
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(MatchFormDto dto)
+    [Authorize(Roles = DbSeeder.AdminRole)]
+    public async Task<IActionResult> Edit(
+        MatchFormDto dto)
     {
         if (!ModelState.IsValid)
         {
@@ -132,9 +143,10 @@ public class MatchesController : Controller
         }
     }
 
-    // POST /Matches/Deactivate/5
+    // Solo Admin: desactivar partido.
     [HttpPost]
     [ValidateAntiForgeryToken]
+    [Authorize(Roles = DbSeeder.AdminRole)]
     public async Task<IActionResult> Deactivate(int id)
     {
         await _matchService.DeactivateAsync(id);

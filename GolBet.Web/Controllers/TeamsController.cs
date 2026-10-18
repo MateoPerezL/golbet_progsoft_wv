@@ -1,9 +1,12 @@
-﻿using GolBet.Services.DTOs;
+﻿using GolBet.Repositories.Data;
+using GolBet.Services.DTOs;
 using GolBet.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GolBet.Web.Controllers;
 
+[Authorize(Roles = DbSeeder.AdminRole)]
 public class TeamsController : Controller
 {
     private readonly ITeamService _teamService;
@@ -13,7 +16,7 @@ public class TeamsController : Controller
         _teamService = teamService;
     }
 
-    // GET /Teams
+    // GET: /Teams
     public async Task<IActionResult> Index()
     {
         var teams = await _teamService.GetAllAsync();
@@ -21,16 +24,17 @@ public class TeamsController : Controller
         return View(teams);
     }
 
-    // GET /Teams/Create
+    // GET: /Teams/Create
     public IActionResult Create()
     {
         return View(new TeamFormDto());
     }
 
-    // POST /Teams/Create
+    // POST: /Teams/Create
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(TeamFormDto dto)
+    public async Task<IActionResult> Create(
+        TeamFormDto dto)
     {
         if (!ModelState.IsValid)
         {
@@ -45,7 +49,7 @@ public class TeamsController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    // GET /Teams/Edit/5
+    // GET: /Teams/Edit/5
     public async Task<IActionResult> Edit(int id)
     {
         var dto = await _teamService.GetForEditAsync(id);
@@ -58,10 +62,11 @@ public class TeamsController : Controller
         return View(dto);
     }
 
-    // POST /Teams/Edit
+    // POST: /Teams/Edit
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Edit(TeamFormDto dto)
+    public async Task<IActionResult> Edit(
+        TeamFormDto dto)
     {
         if (!ModelState.IsValid)
         {
@@ -76,14 +81,15 @@ public class TeamsController : Controller
         return RedirectToAction(nameof(Index));
     }
 
-    // POST /Teams/Deactivate/5
+    // POST: /Teams/Deactivate/5
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Deactivate(int id)
     {
         await _teamService.DeactivateAsync(id);
 
-        TempData["Success"] = "Equipo desactivado.";
+        TempData["Success"] =
+            "Equipo desactivado.";
 
         return RedirectToAction(nameof(Index));
     }

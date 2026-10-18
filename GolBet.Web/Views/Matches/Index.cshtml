@@ -14,10 +14,14 @@
         Cartelera de partidos
     </h2>
 
-    <a asp-action="Create"
-       class="btn btn-success">
-        + Nuevo partido
-    </a>
+    @if (User.IsInRole("Admin"))
+    {
+        <a asp-action="Create"
+           class="btn btn-success">
+            + Nuevo partido
+        </a>
+    }
+
 </div>
 
 

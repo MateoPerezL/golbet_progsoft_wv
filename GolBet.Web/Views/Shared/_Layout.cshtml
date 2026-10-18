@@ -2,9 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
 
-    <title>@ViewData["Title"] - GolBet</title>
+    <title>
+        @ViewData["Title"] - GolBet
+    </title>
 
     <link rel="stylesheet"
           href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -20,8 +23,13 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm
-            navbar-dark bg-success border-bottom shadow-sm mb-3">
+        <nav class="navbar navbar-expand-sm
+            navbar-toggleable-sm
+            navbar-dark
+            bg-success
+            border-bottom
+            shadow-sm
+            mb-3">
 
             <div class="container-fluid">
                 <a class="navbar-brand"
@@ -43,7 +51,8 @@
                 </button>
 
                 <div class="navbar-collapse collapse
-                    d-sm-inline-flex justify-content-between">
+                    d-sm-inline-flex
+                    justify-content-between">
 
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -64,14 +73,17 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link"
-                               asp-area=""
-                               asp-controller="Teams"
-                               asp-action="Index">
-                                Equipos
-                            </a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   asp-area=""
+                                   asp-controller="Teams"
+                                   asp-action="Index">
+                                    Equipos
+                                </a>
+                            </li>
+                        }
 
                         <li class="nav-item">
                             <a class="nav-link"
@@ -82,17 +94,21 @@
                             </a>
                         </li>
                     </ul>
+
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
     </header>
 
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main"
+              class="pb-3">
 
             @if (TempData["Success"] is string message)
             {
-                <div class="alert alert-success alert-dismissible
+                <div class="alert alert-success
+                    alert-dismissible
                     fade show"
                      role="alert">
 
@@ -131,6 +147,8 @@
             asp-append-version="true">
     </script>
 
-    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync(
+        "Scripts",
+        required: false)
 </body>
 </html>
